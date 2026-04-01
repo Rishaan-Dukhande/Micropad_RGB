@@ -4,8 +4,6 @@ RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It h
 
 <img src=Images/ProjectPicture.png alt="RGBmicro" width="300"/>
 
-It serves as rgb controller to help learn how to controller rgb colors (red, green, and blue) from values 0 to 255.
-
 ## Features:
 - Portable Acrylic case with openings for connection?
 - Seeeduino XIAO SAMD21 controller
@@ -14,16 +12,26 @@ It serves as rgb controller to help learn how to controller rgb colors (red, gre
 - Small OLED screen that displays the current RGB value in real time.
 - 128x32 OLED Display
 
+### How it works
+
+The RGB micro serves as an rgb controller. It can switch between the red, green, and blue pins that make an RGB color. The joystick allows a change of brightness for the selected LED. The range of these values is 0-255, the same as the range for each color in LED's. The OLED screen shows the rgb values of each color so that the user of the RGB micro knows what color they have generated.
+
+
 
 
 ## PCB
-Here's my PCB! It was made in KiCad. The silkscreen was imported from a Figma image.
+Here's my PCB! Kicad was used to create both the schematic and layout of the pcb.
 
 Schematic
+
 <img src=Images/Schematic.png alt="Schematic" width="300"/>
 
 PCB
-<img src=Images/PCB.png alt="Schematic" width="300"/>
+
+<img src=Images/PCB.png alt="PCB" width="300"/>
+
+The 1x4 connector on the top is for connecting the Oled Screen (SSD1306 0.91" OLED I2C 128x32)
+The 1x5 connector on the bottom center of the pcb is for connecting a joystick. brightness control.
 
 ## Sizes
 
