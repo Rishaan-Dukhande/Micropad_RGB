@@ -1,6 +1,8 @@
-# Rishaan RGB micropad
+# Rishaan RGB micro hackpad
 
 RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It has a case and uses QMK firmware
+
+<img src=Images/ProjectPicture.png alt="RGBmicro" width="300"/>
 
 It serves as rgb controller to help learn how to controller rgb colors (red, green, and blue) from values 0 to 255.
 
@@ -18,10 +20,10 @@ It serves as rgb controller to help learn how to controller rgb colors (red, gre
 Here's my PCB! It was made in KiCad. The silkscreen was imported from a Figma image.
 
 Schematic
-<img src=assets/schematic.png alt="Schematic" width="300"/>
+<img src=Images/Schematic.png alt="Schematic" width="300"/>
 
 PCB
-<img src=assets/pcb.png alt="Schematic" width="300"/>
+<img src=Images/PCB.png alt="Schematic" width="300"/>
 
 ## Sizes
 
