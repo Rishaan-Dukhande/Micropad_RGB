@@ -10,7 +10,6 @@ RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It h
 - RGB LEDs for bright color display,
 - 2 buttons to cycle through red, green, and blue colors, an analog joystick to control brightness
 - Small OLED screen that displays the current RGB value in real time.
-- 128x32 OLED Display
 
 ### How it works
 
