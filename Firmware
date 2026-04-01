@@ -1,0 +1,86 @@
+import board
+import analogio
+import digitalio
+import time
+import busio
+import displayio
+import terminalio
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+
+displayio.release_displays()
+
+i2c = busio.I2C(board.SCL, board.SDA)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3C)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=32)
+
+import pwmio
+
+led_r = pwmio.PWMOut(board.D2, frequency=5000, duty_cycle=0)
+led_g = pwmio.PWMOut(board.D3, frequency=5000, duty_cycle=0)
+led_b = pwmio.PWMOut(board.D6, frequency=5000, duty_cycle=0)
+
+btn1 = digitalio.DigitalInOut(board.D0)
+btn1.direction = digitalio.Direction.INPUT
+btn1.pull = digitalio.Pull.UP
+
+btn2 = digitalio.DigitalInOut(board.D1)
+btn2.direction = digitalio.Direction.INPUT
+btn2.pull = digitalio.Pull.UP
+
+joy_x = analogio.AnalogIn(board.A7)
+
+colors = [
+    (65535, 0, 0),
+    (0, 65535, 0),
+    (0, 0, 65535),
+]
+color_names = ["RED", "GREEN", "BLUE"]
+current_color = 0
+brightness = 1.0
+
+splash = displayio.Group()
+display.show(splash)
+text_area = label.Label(terminalio.FONT, text="R:255 G:0 B:0", x=2, y=15)
+splash.append(text_area)
+
+def set_led(r, g, b, bright):
+    led_r.duty_cycle = int(r * bright)
+    led_g.duty_cycle = int(g * bright)
+    led_b.duty_cycle = int(b * bright)
+
+def update_display(r, g, b):
+    r8 = int(r / 65535 * 255)
+    g8 = int(g / 65535 * 255)
+    b8 = int(b / 65535 * 255)
+    text_area.text = f"R:{r8} G:{g8} B:{b8}"
+
+def get_brightness():
+    raw = joy_x.value
+    return raw / 65535
+
+btn1_last = True
+btn2_last = True
+
+while True:
+    brightness = get_brightness()
+
+    btn1_now = btn1.value
+    btn2_now = btn2.value
+
+    if not btn1_now and btn1_last:
+        current_color = (current_color + 1) % len(colors)
+        time.sleep(0.05)
+
+    if not btn2_now and btn2_last:
+        current_color = (current_color - 1) % len(colors)
+        time.sleep(0.05)
+
+    btn1_last = btn1_now
+    btn2_last = btn2_now
+
+    r, g, b = colors[current_color]
+    set_led(r, g, b, brightness)
+    update_display(r, g, b)
+
+    time.sleep(0.02)
