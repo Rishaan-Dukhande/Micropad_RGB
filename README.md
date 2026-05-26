@@ -1,9 +1,7 @@
 # Rishaan RGB micro hackpad
 
 RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It has a case and uses QMK firmware
-
-![RGBmicro 3D View](path/to/your/image.png)
-<img src="Images/RGBView.png" width="450" height="500">
+<img src="Images/RGBView.png" >
 
 ## Features:
 
@@ -23,11 +21,11 @@ Here's my PCB! Kicad was used to create both the schematic and layout of the pcb
 
 ### Schematic
 
-![Schematic](path/to/your/schematic.png)
+<img src="Images/RGBSchematic.png" >
 
 ### PCB
 
-![PCB](path/to/your/pcb.png)
+<img src="Images/RGBMicropadPCBTraces" >
 
 The 1x4 connector on the top is for connecting the Oled Screen (SSD1306 0.91" OLED I2C 128x32) The 1x5 connector on the bottom center of the pcb is for connecting a joystick. brightness control.
 
