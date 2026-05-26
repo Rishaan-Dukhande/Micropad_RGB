@@ -25,7 +25,7 @@ Here's my PCB! Kicad was used to create both the schematic and layout of the pcb
 
 ### PCB
 
-<img src="Images/RGBMicropadPCBTraces" >
+<img src="Images/RGBMicropadPCBTraces.png" >
 
 The 1x4 connector on the top is for connecting the Oled Screen (SSD1306 0.91" OLED I2C 128x32) The 1x5 connector on the bottom center of the pcb is for connecting a joystick. brightness control.
 
