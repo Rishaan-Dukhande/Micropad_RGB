@@ -3,6 +3,7 @@
 RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It has a case and uses QMK firmware
 
 ![RGBmicro 3D View](path/to/your/image.png)
+<img src="RGBView.png"/>
 
 ## Features:
 
