@@ -38,7 +38,7 @@
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_5555555d_5755f5ff)
+			(layerselection 0x00000000_00000000_55555555_57555550)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -70,7 +70,7 @@
 			(sketchdnponfab yes)
 			(crossoutdnponfab yes)
 			(subtractmaskfromsilk no)
-			(outputformat 1)
+			(outputformat 3)
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
@@ -101,7 +101,7 @@
 		(at 242.75 117.25)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
-		(property "Reference" "Color Control"
+		(property "Reference" "Mode"
 			(at 3.35 7.45 0)
 			(layer "F.SilkS")
 			(uuid "0c77b646-7295-4285-b61a-8451bbf7571b")
@@ -4755,7 +4755,7 @@
 		(at 242.75 128.75)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
-		(property "Reference" "Brightness"
+		(property "Reference" "Presets"
 			(at 3.35 7.45 0)
 			(layer "F.SilkS")
 			(uuid "5313dd94-fd5e-438d-bf57-4ff953ca564e")
