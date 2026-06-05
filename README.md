@@ -1,19 +1,27 @@
 # Rishaan RGB micro hackpad
 
-RGBmicro is a 2 key macropad with a joystick, an OLED Display, and 3 led's. It has a case and uses QMK firmware
+The RGB micro is a 2 key macropad with a joystick, an OLED Display, and one RGB LED - giving the user multiple ways to change an LED to any color and brightness they want! This serves as the first PCB I have created and is a great introductory project to develop PCB, CAD, and firmware skills for engineering! Features, Images, and steps to recreate this project are listed below.
 <img src="Images/RGBView.png" >
 
 ## Features:
 
-* Portable Acrylic case with openings for connection?
+* Portable 3D case with openings for components and USB connection
 * Seeeduino XIAO SAMD21 controller
-* RGB LED's for bright color display,
-* 2 buttons to cycle through red, green, and blue colors, an analog joystick to control brightness
+* 1 RGB LED for bright color display
+* 2 tactile switch buttons for modes and presets
 * Small OLED screen that displays the current RGB value in real time.
+* Joystick for smooth & dynamic brightness and color control
 
 ## How it works
 
-The RGB micro serves as an rgb controller. It can switch between the red, green, and blue pins that make an RGB color. The joystick allows a change of brightness for the selected LED. The range of these values is 0-255, the same as the range for each color in LED's. The OLED screen shows the rgb values of each color so that the user of the RGB micro knows what color they have generated.
+The RGB Micropad is a mini RGB LED controller. The joystick navigates 
+a full 360° color wheel — pushing in any direction changes the LED to 
+that hue in real time. SW1 toggles between Color mode and Brightness 
+mode, while SW2 cycles through 8 color presets. Pressing the joystick 
+button activates Saturation mode, letting the user dial between vivid 
+and pastel tones and creating a larger array of colors for the LED to
+display. The OLED screen shows the current mode, color name, 
+RGB values, and brightness percentage at all times.
 
 ## PCB
 
@@ -27,26 +35,25 @@ Here's my PCB! Kicad was used to create both the schematic and layout of the pcb
 
 <img src="Images/RGBMicropadPCBTraces.png" >
 
-The 1x4 connector on the top is for connecting the Oled Screen (SSD1306 0.91" OLED I2C 128x32) The 1x5 connector on the bottom center of the pcb is for connecting a joystick. brightness control.
+The 1x4 connector on the top is for connecting the Oled Screen (SSD1306 0.91" OLED I2C 128x32) The 1x5 connector on the bottom center of the pcb is for connecting the controling joystick
 
-## Sizes
+## Sizes and PCB Info
 
-* Board size: 58mm x 70mm
+* Board size: 56.95mm x 68.85mm
 * 2 layer PCB
 * Designed in KiCad 9.0
 
 ## Firmware
-
-Written in CircuitPython. The main.py file controls:
-
-* Joystick analog input -> PWM brightness control
-* Button 1 -> cycle forward through R, G, B colors
-* Button 2 -> cycle backward through R, G, B colors
-* OLED display -> shows current R, G, B values in real time
+Written in CircuitPython. The main.py file enables the user to have the following controls:
+* SW1 → Toggle between Color mode and Brightness mode
+* SW2 → Cycle through 8 color presets
+* Joystick button → Toggle saturation mode on/off
+* Joystick X/Y → Navigate color wheel (Color mode) or adjust brightness (Brightness mode)
+* OLED display → Shows current mode, color name, RGB values, and brightness %
 
 ## BOM:
 
-Here is everything used in the RGBmicro hackpad
+Here is everything used in the RGB micro hackpad
 
 | **Qty** | **Component** | **Note** | **Price** |
 |:--:|:--:|:--:|:--:|
@@ -72,9 +79,13 @@ Order the parts in the Bill of Materials. These will be soldered on the PCB manu
 3. Place the order - remember to pick the least expensive shipping!
 
 ### Assembly
+
+<img src="Images/ResistorValueChart.png" >
+
 1. Solder resistors R1-R5 onto the PCB. Utilize the following resistor values
-2. Table to read resistor values:
-  <img src="Images/RGBView.png" >
+2. Refer to the table above to read resistor values before incorporating them.
+The table below has the resistor values with their placement on the PCB.
+
 | **R#** | **Value** |
 |:--:|:--:|
 | R1 | 220Ω |
@@ -87,7 +98,7 @@ Order the parts in the Bill of Materials. These will be soldered on the PCB manu
 4. Solder tactile switches SW1 and SW2.
 5. Solder 5 pin header into the slot for the Joystick
 6. Solder 4 pin header into the slot for the OLED screen
-7. Place XIAO SAMD21 on the top left of the board
+7. Solder XIAO SAMD21 on the top left of the board
 
 ### Firmware
 1. Install CircuitPython on XIAO SAMD21
@@ -114,6 +125,7 @@ Order the parts in the Bill of Materials. These will be soldered on the PCB manu
    Mode 1: Color
    Mode 2: Brightness
 5. Press SW2 to cycle through preset colors for LED
+6. Press Joystick button to toggle saturation mode (This is an advanced mode for an additional array of colors)
 
 
 ## Devlog
@@ -126,18 +138,19 @@ The schematic was designed in Kicad. This included the following components:
 5) Two tactile buttons
 
 ### Session 2 — PCB Layout
+Note) This takes about 2 hrs for beginners
 1) Layout of all components (If you are replicating, be creative and change locations of components).
 2) Added GND copper pour so I don't have to route GND pins of every component
 3) Routed the PCB connections between XIAO board and components
-4) Created Silkscreen for astethics including Hack Club logo and component labels.
+4) Created Silkscreen for aesthetics including Hack Club logo and component labels.
 
 ### Session 3 - Error with pullup resistors
-1) Edited schematic by adding 10KΩ pullup resistors for both tacticle switches
+1) Edited schematic by adding 10KΩ pullup resistors for both tactile switches
 2) Used Ohm's law to calculate resistor values for RGB LED pins
-   a) Blue and Green pins recieve 47Ω resistors
-   b) Red pin recieves 220Ω resistors
-   c) This occurs because they have different voltage requirments in order to power the color
-3) Update PCB layout to include the resistors.
+   a) Blue and Green pins receive 47Ω resistors
+   b) Red pin receives 220Ω resistors
+   c) This occurs because they have different voltage requirements in order to power the color
+3) Update PCB layout to include the resistors (2hrs).
 
 ### Session 4 — Firmware
 1) Wrote CircuitPython firmware. This enables the PCB to have the following capabilities:
@@ -147,13 +160,21 @@ The schematic was designed in Kicad. This included the following components:
    d) Easily use joystick to change LED characteristics
 
 ### Session 5 — Case Design
-Designed sandwich mount case in Fusion 360. 
+Designed sandwich mount 3D-case in Fusion 360. The sandwich mount design can be found as the 5th mount in this [Different keyboard mounts](https://www.monsgeek.com/blog/comprehensive-guide-to-keyboard-mounting-styles/) document.
+
+#### Bottom case (1hr)
 1) Created bottom case with 0.4 mm clearance for PCB on all sides
-2) Added 10mm thcik walls all around board and 3.2mm diameter moutning holes
+2) Added 10mm thick walls all around board and 3.2mm diameter mounting holes
+#### Top case (1 hr)
 3) Measured placement of components on PCB and created openings
-4) Added fillets to strenthen design and make it look good
+4) Added fillets to strengthen design and make it look good
+5) Added project name, author, and hackclub svg logo
+
+### Session 6 - README and Github Polish
+1) Reviewed current github
+2) Added devlog, images, and project info to the README.
 
 
 ## Extra stuff
 
-I am ready to create more complex hackpads.
+I am ready to create more complex hackpads. Through this project, I was able to gain PCB making skills and refine my CAD skills. I am now confident that I can create electronic projects at a much faster pace with the use of these digital designing tools. If you have any project recommendations, please feel free to share them!
