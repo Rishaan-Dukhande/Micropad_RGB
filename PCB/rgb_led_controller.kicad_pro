@@ -487,10 +487,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "Gerber_RGB_files/",
+      "plot": "/Users/rishaand/Documents/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "rgb_led_controller.step",
+      "step": "../../../rgb_led_controller.step",
       "svg": "",
       "vrml": ""
     },

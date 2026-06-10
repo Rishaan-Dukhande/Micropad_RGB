@@ -5612,7 +5612,18 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "/Users/rishaand/Documents/3D_Models/KY-023_assy.stp"
+			(offset
+				(xyz -1.85 58 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 90)
 			)
 		)
 	)
@@ -5859,6 +5870,17 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+		(model "/Users/rishaand/Documents/3D_Models/0.91in OLED - ed Without Glass.stp"
+			(offset
+				(xyz -15 -2.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
 			)
 		)
 	)
