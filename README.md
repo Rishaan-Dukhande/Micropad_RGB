@@ -54,20 +54,20 @@ Written in CircuitPython. The main.py file enables the user to have the followin
 
 ## BOM:
 
-Here is everything used in the RGB micro hackpad
+Here is everything used in the RGB micro hackpad. Note that most of the prices come in sets because components cost the least when they are bought in bulk.
 
 | **Qty** | **Component** | **Note** | **Price** |
 |:--:|:--:|:--:|:--:|
-| 1 | Seeeduino XIAO SAMD21 | Main processor | [~$5.40](https://www.amazon.com/dp/B0B15B869W) |
-| 1 | SSD1306 0.91" OLED I2C 128x32 | Displays brightness and color info | [~$6.99](https://www.amazon.com/dp/B01N0KIVUX) |
-| 1 | Analog thumbstick joystick module KY-023 | Joystick control | [~$5.99](https://www.amazon.com/dp/B07V7X6LMP) |
-| 1 | RGB LED 5mm common cathode | LED that is being controlled | [~$7.99 (100 pack)](https://www.amazon.com/dp/B077XGF3YR) |
-| 2 | 10KΩ resistor | Pull up resistors for buttons | [~$7.99 (kit)](https://www.amazon.com/dp/B07YWNHZHS) |
-| 1 | 220Ω resistor | Red LED pin | [included in kit](https://www.amazon.com/dp/B07YWNHZHS) |
-| 2 | 47Ω resistor | Green and Blue LED pins | [included in kit](https://www.amazon.com/dp/B07YWNHZHS) |
-| 2 | Tactile push button 6x6mm | Control modes for joystick control | [~$5.99 (pack)](https://www.amazon.com/s?k=tactile+push+button+6x6mm) |
-| 1 | 2.54mm pin header 1x04 | OLED screen connector | [~$5.99 (pack)](https://www.amazon.com/s?k=2.54mm+pin+header+1x04) |
-| 1 | 2.54mm pin header 1x05 | Joystick connector | [included in pack](https://www.amazon.com/s?k=2.54mm+pin+header+1x05) |
+| 1 | Seeeduino XIAO SAMD21 | Main processor | [~$5.40](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) |
+| 1 | SSD1306 0.91" OLED I2C 128x32 | Displays brightness and color info | [~$7.99](https://www.amazon.com/gp/product/B079BN2J8V/ref=ewc_pr_img_4?smid=A1WZRPJ0MN58A9&th=1) |
+| 1 | Analog thumbstick joystick module KY-023 | Joystick control | [~$7.99](https://www.amazon.com/gp/product/B0GWQ6KXYP/ref=ewc_pr_img_3?smid=A3S807LE0L63AP&psc=1) |
+| 1 | RGB LED 5mm common cathode | LED that is being controlled | [~$8.99 (100 pack)](https://www.amazon.com/gp/product/B01C3ZZT8W/ref=ewc_pr_img_1?smid=A14FP9XIRL6C1F&th=1) |
+| 2 | 10KΩ resistor | Pull up resistors for buttons | [~$8.99 (kit)](https://www.amazon.com/Elegoo-Values-Resistor-Assortment-Compliant/dp/B072BL2VX1) |
+| 1 | 220Ω resistor | Red LED pin | [included in resistor kit](https://www.amazon.com/Elegoo-Values-Resistor-Assortment-Compliant/dp/B072BL2VX1) |
+| 2 | 47Ω resistor | Green and Blue LED pins | [included in resistor kit](https://www.amazon.com/Elegoo-Values-Resistor-Assortment-Compliant/dp/B072BL2VX1) |
+| 2 | Tactile push button 6x6mm | Control modes for joystick control | [~$5.99 (pack)](https://www.amazon.com/gp/product/B07VSNN9S2/ref=ewc_pr_img_2?smid=AJJYA8M5YMCKV&psc=1) |
+| 1 | 2.54mm pin header 1x04 | OLED screen connector | [~$6.99 (pack)](https://www.amazon.com/MCIGICM-Header-2-54mm-Arduino-Connector/dp/B07PKKY8BX) |
+| 1 | 2.54mm pin header 1x05 | Joystick connector | [included in pack above](https://www.amazon.com/MCIGICM-Header-2-54mm-Arduino-Connector/dp/B07PKKY8BX) |
 
 ## Steps to Reproduce
 
@@ -76,7 +76,7 @@ Order the parts in the Bill of Materials. These will be soldered on the PCB manu
 
 ### PCB Manufacturing
 1. Download PCB/gerbers.zip (in PCB folder of repository)
-2. Upload to JLCPCB or PCBWay (You can get grants from hackclub if you edit it!)
+2. Upload to JLCPCB or PCBWay (You can get grants from hackclub if you edit the PCB before upload!)
 3. Place the order - remember to pick the least expensive shipping!
 
 ### Assembly
