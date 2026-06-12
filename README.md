@@ -1,7 +1,7 @@
 # Rishaan RGB micro hackpad
 
 The RGB micro is a 2 key macropad with a joystick, an OLED Display, and one RGB LED - giving the user multiple ways to change an LED to any color and brightness they want! This serves as the first PCB I have created and is a great introductory project to develop PCB, CAD, and firmware skills for engineering! I created this project to develop these skills and enhance my engineering skills and knowledge. I have used RGBs and there is a color game called hues and cues, and this LED allows you to access a pallet just like the game, but in real life! Features, Images, and steps to recreate this project are listed below.
-<img src="FullCAD+PCB.png">
+<img src="Images/FullCAD+PCB.png">
 <img src="Images/RGBView.png" >
 
 ## Features:
