@@ -75,8 +75,8 @@ Here is everything used in the RGB micro hackpad
 Order the parts in the Bill of Materials. These will be soldered on the PCB manually later on (unless specified in JLCPCB)
 
 ### PCB Manufacturing
-1. Download `PCB/gerbers.zip`
-2. Upload to JLCPCB or PCBWay
+1. Download PCB/gerbers.zip (in PCB folder of repository)
+2. Upload to JLCPCB or PCBWay (You can get grants from hackclub if you edit it!)
 3. Place the order - remember to pick the least expensive shipping!
 
 ### Assembly
@@ -103,7 +103,7 @@ The table below has the resistor values with their placement on the PCB.
 
 ### Firmware
 1. Install CircuitPython on XIAO SAMD21
-2. Copy `Firmware/main.py` to CIRCUITPY drive
+2. Copy Firmware/main.py to CIRCUITPY drive (in firmware folder of repo)
 3. Copy required libraries to CIRCUITPY/lib/ to run the firmware on the PCB:
    a. adafruit_ssd1306
    b. adafruit_bus_device
