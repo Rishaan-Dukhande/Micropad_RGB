@@ -4,6 +4,10 @@ The RGB micro is a 2 key macropad with a joystick, an OLED Display, and one RGB 
 <img src="Images/FullCAD+PCB.png">
 <img src="Images/RGBView.png" >
 
+# Demo
+
+[![Video Title](https://img.youtube.com/vi/ukX_e_Ombvo/0.jpg)](https://www.youtube.com/watch?v=ukX_e_Ombvo)
+
 ## Features:
 
 * Portable 3D case with openings for components and USB connection
@@ -101,22 +105,11 @@ The table below has the resistor values with their placement on the PCB.
 6. Solder 4 pin header into the slot for the OLED screen
 7. Solder XIAO SAMD21 on the top left of the board
 
-### Firmware
-1. Install CircuitPython on XIAO SAMD21
-2. Copy Firmware/main.py to CIRCUITPY drive (in firmware folder of repo)
-3. Copy required libraries to CIRCUITPY/lib/ to run the firmware on the PCB:
-   a. adafruit_ssd1306
-   b. adafruit_bus_device
-   c. adafruit_framebuf
-
-### Flashing Instructions (Make sure firmware is on PCB)
-1. Download CircuitPython for XIAO SAMD21 from circuitpython.org
-2. Double tap reset button on XIAO — drive called XIAO-BOOT appears
-3. Drag CircuitPython .uf2 file onto XIAO-BOOT drive
-4. Drive reappears as CIRCUITPY
-5. Copy main.py to CIRCUITPY root
-6. Copy libraries to CIRCUITPY/lib/
-7. The board should run automatically when it is powered
+### Flashing Instructions (Get firmware onto the PCB)
+1. Copy or download the firmware as a .ino file and open it in arduino IDE
+2. Use a USB-C transfer cable and plug it into the seedunio XAMD 21 and a computer
+3. Upload the code using arduino IDE
+4. The RGB Micropad will automatically begin to work (it can be plugged in directly to power)
 
 ### Verify your RGB Micropad works!
 1. Plug in via USB (either computer of any electricity source)
@@ -127,6 +120,9 @@ The table below has the resistor values with their placement on the PCB.
    Mode 2: Brightness
 5. Press SW2 to cycle through preset colors for LED
 6. Press Joystick button to toggle saturation mode (This is an advanced mode for an additional array of colors)
+
+## AI Usage
+AI was used during the project as a step-by-step guide. The firmware was also written by AI.
 
 
 ## Devlog
@@ -174,6 +170,11 @@ Designed sandwich mount 3D-case in Fusion 360. The sandwich mount design can be 
 ### Session 6 - README and Github Polish
 1) Reviewed current github
 2) Added devlog, images, and project info to the README.
+
+### session 7 - Assembly (3-4 hrs)
+1) Soldered components to the PCB
+2) Re-designed the case to better fit PCB
+3) Created Demo Video
 
 
 ## Extra stuff
